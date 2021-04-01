@@ -1,1 +1,1 @@
-# My Personal Typescript project files structure
+# A Typescript project files structure

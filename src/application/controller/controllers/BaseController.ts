@@ -9,6 +9,7 @@ export class BaseController implements IBaseController {
   }
 
   async create (request: HttpRequest): Promise<HttpResponse> {
+    console.log(await this.service.create(request))
     return await this.service.create(request)
   }
 

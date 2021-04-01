@@ -11,23 +11,23 @@ export class BaseService implements IBaseService {
     this.baseRepository = new BaseRepository()
   }
 
-  async create (request: HttpRequest): Promise<HttpResponse> {
-    return ok()
+  async create (request: HttpRequest): Promise<any> {
+    return ok('created with success')
   };
 
   async get (httpRequest: HttpRequest): Promise<HttpResponse> {
-    return ok()
+    return ok('list with success')
   };
 
   async getById (httpRequest: HttpRequest): Promise<HttpResponse> {
-    return ok()
+    return ok('get with success')
   };
 
   async update (httpRequest: HttpRequest): Promise<HttpResponse> {
-    return ok()
+    return ok('update with success')
   };
 
   async delete (httpRequest: HttpRequest): Promise<HttpResponse> {
-    return ok()
+    return ok('deleted with success')
   };
 }

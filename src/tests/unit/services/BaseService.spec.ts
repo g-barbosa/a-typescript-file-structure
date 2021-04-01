@@ -52,45 +52,24 @@ describe('BaseService Tests', () => {
   test('Should return success when get an item', async () => {
     const { sut } = makeSut()
 
-    const httpRequest = {
-      body: {
-        a: 'a',
-        b: 'b',
-        c: 'c'
-      }
-    }
-    const response = await sut.getById(httpRequest)
+    const response = await sut.getById('1')
     expect(response.statusCode).toBe(200)
-    expect(response.body).toEqual('get with success')
+    expect(response.body).toEqual('get item 1 with success')
   })
 
   test('Should return success when update an item', async () => {
     const { sut } = makeSut()
 
-    const httpRequest = {
-      body: {
-        a: 'a',
-        b: 'b',
-        c: 'c'
-      }
-    }
-    const response = await sut.update(httpRequest)
+    const response = await sut.update('1')
     expect(response.statusCode).toBe(200)
-    expect(response.body).toEqual('update with success')
+    expect(response.body).toEqual('update item 1 with success')
   })
 
   test('Should return success when delete an item', async () => {
     const { sut } = makeSut()
 
-    const httpRequest = {
-      body: {
-        a: 'a',
-        b: 'b',
-        c: 'c'
-      }
-    }
-    const response = await sut.delete(httpRequest)
+    const response = await sut.delete('1')
     expect(response.statusCode).toBe(200)
-    expect(response.body).toEqual('deleted with success')
+    expect(response.body).toEqual('delete item 1 with success')
   })
 })

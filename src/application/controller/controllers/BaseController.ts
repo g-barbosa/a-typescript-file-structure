@@ -9,7 +9,6 @@ export class BaseController implements IBaseController {
   }
 
   async create (request: HttpRequest): Promise<HttpResponse> {
-    console.log(await this.service.create(request))
     return await this.service.create(request)
   }
 
@@ -17,15 +16,15 @@ export class BaseController implements IBaseController {
     return await this.service.get(request)
   }
 
-  async getById (request: HttpRequest): Promise<HttpResponse> {
-    return await this.service.getById(request)
+  async getById (id: string): Promise<HttpResponse> {
+    return await this.service.getById(id)
   }
 
-  async update (request: HttpRequest): Promise<HttpResponse> {
-    return await this.service.update(request)
+  async update (id: string): Promise<HttpResponse> {
+    return await this.service.update(id)
   }
 
-  async delete (request: HttpRequest): Promise<HttpResponse> {
-    return await this.service.delete(request)
+  async delete (id: string): Promise<HttpResponse> {
+    return await this.service.delete(id)
   }
 }

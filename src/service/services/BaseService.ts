@@ -19,15 +19,15 @@ export class BaseService implements IBaseService {
     return ok('list with success')
   };
 
-  async getById (httpRequest: HttpRequest): Promise<HttpResponse> {
-    return ok('get with success')
+  async getById (id: string): Promise<HttpResponse> {
+    return ok(`get item ${id} with success`)
   };
 
-  async update (httpRequest: HttpRequest): Promise<HttpResponse> {
-    return ok('update with success')
+  async update (id: string): Promise<HttpResponse> {
+    return ok(`update item ${id} with success`)
   };
 
-  async delete (httpRequest: HttpRequest): Promise<HttpResponse> {
-    return ok('deleted with success')
+  async delete (id: string): Promise<HttpResponse> {
+    return ok(`delete item ${id} with success`)
   };
 }
